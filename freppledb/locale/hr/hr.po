@@ -10,6 +10,7 @@
 # You should have received a copy of the GNU Affero General Public
 # License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # Blago Čuljak <blago.culjak@hotmail.com>, 2015, 2016.
+# Davor Bojkić <bole@dajmi5.com> 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -31,7 +32,7 @@ msgstr ""
 
 #: common/static/js/frepple.js:201
 msgid "Connection failed"
-msgstr ""
+msgstr "Veza nije uspostavljena"
 
 #: common/static/js/frepple.js:213 common/static/js/frepple.js:1513
 #: common/static/js/frepple.js:1562 common/static/js/frepple.js:2196
@@ -65,7 +66,7 @@ msgstr "Spremi"
 #: common/static/js/frepple.js:324
 #: input/static/operationplandetail/src/operationplandetailCtrl.js:353
 msgid "Return to page"
-msgstr ""
+msgstr "Povratak na stranicu"
 
 #: common/static/js/frepple.js:542
 msgid "select"
@@ -133,7 +134,7 @@ msgstr "OK"
 
 #: common/static/js/frepple.js:1180
 msgid "Export CSV or Excel file"
-msgstr "CSV- oder Excel-Datei exportieren"
+msgstr "CSV ili Excel izvoz podataka"
 
 #: common/static/js/frepple.js:1187 common/static/js/frepple.js:1210
 msgid "Export format"
@@ -149,17 +150,17 @@ msgstr "CSV popis"
 
 #: common/static/js/frepple.js:1196 common/static/js/frepple.js:1227
 msgid "Data source URL"
-msgstr ""
+msgstr "URL Izvora podataka"
 
 #: common/static/js/frepple.js:1198 common/static/js/frepple.js:1229
 msgid "Using this link external applications can pull data from frePPLe"
-msgstr ""
+msgstr "Korištenjem ovog linka vanjske aplikacije mogu povući podatke iz frePPla"
 
 #: common/static/js/frepple.js:1204 common/static/js/frepple.js:1235
 #: common/static/js/frepple.js:2789
 #, fuzzy
 msgid "Copy to clipboard"
-msgstr "Kopirati u međupohranu"
+msgstr "Kopiraj u međuspremnik"
 
 #: common/static/js/frepple.js:1213
 msgid "Spreadsheet table"
@@ -171,7 +172,7 @@ msgstr "CSV Tablica"
 
 #: common/static/js/frepple.js:1246
 msgid "Scenarios to export"
-msgstr ""
+msgstr "Scenaiji za izvoz"
 
 #: common/static/js/frepple.js:1273 common/static/js/frepple.js:2143
 msgid "Export"
@@ -179,12 +180,12 @@ msgstr "Izvezi"
 
 #: common/static/js/frepple.js:1482
 msgid "Delete data"
-msgstr "Brisanje podataka"
+msgstr "Briši podataka"
 
 #: common/static/js/frepple.js:1486
 #, javascript-format
 msgid "You are about to delete %s objects AND ALL RELATED RECORDS!"
-msgstr "Obrisati ćete %s objekata i sve vezane zapise!"
+msgstr "Obrisati ćete %s objekata i SVE POVEZANE ZAPISE!"
 
 #: common/static/js/frepple.js:1490 common/static/js/frepple.js:1539
 #: common/static/js/frepple.js:2151
@@ -193,12 +194,12 @@ msgstr "Potvrdi"
 
 #: common/static/js/frepple.js:1531
 msgid "Copy data"
-msgstr "Kopiranje podataka"
+msgstr "Kopiraj podataka"
 
 #: common/static/js/frepple.js:1535
 #, javascript-format
 msgid "You are about to duplicate %s objects"
-msgstr "Spremate se duplicirati objekte %s"
+msgstr "Spremate se duplicirati %s objekata"
 
 #: common/static/js/frepple.js:1688
 msgid "Search"
@@ -210,11 +211,11 @@ msgstr "unutar"
 
 #: common/static/js/frepple.js:1753
 msgid "is child of"
-msgstr ""
+msgstr "je podređeni od"
 
 #: common/static/js/frepple.js:1755
 msgid "is null"
-msgstr ""
+msgstr "je null"
 
 #: common/static/js/frepple.js:1787
 msgid "days"
@@ -234,7 +235,7 @@ msgstr "Kliknite OK za potvrdu brisanja favorita"
 
 #: common/static/js/frepple.js:2147
 msgid "Export selected records?"
-msgstr ""
+msgstr "Izvoz odabranih zapisa?"
 
 #: common/static/js/frepple.js:2161
 msgid "connecting"
@@ -282,7 +283,7 @@ msgstr "Widget dodaj"
 
 #: common/static/js/frepple.js:2398
 msgid "Add new below"
-msgstr "dodaj nove ispod"
+msgstr "Dodaj nove ispod"
 
 #: common/static/js/frepple.js:2399
 msgid "Add new above"
@@ -290,12 +291,12 @@ msgstr "Dodaj novi iznad"
 
 #: common/static/js/frepple.js:2400
 msgid "Delete"
-msgstr "Ukloni"
+msgstr "Briši"
 
 #: common/static/js/frepple.js:2553
 #, javascript-format
 msgid "%s unread messages"
-msgstr ""
+msgstr "%s nepročitanih poruka"
 
 #: common/static/js/frepple.js:2558
 #, fuzzy
@@ -358,7 +359,7 @@ msgstr "Otkazano"
 #: common/static/js/frepple.js:2930
 #, javascript-format
 msgid "%s records processed"
-msgstr ""
+msgstr "%s zapisa obrađeno"
 
 #: common/static/js/frepple.js:3664
 #, fuzzy
@@ -373,28 +374,28 @@ msgstr "Ažuriraj"
 #: common/static/js/frepple.js:3683
 #, javascript-format
 msgid "Manage notifications of %s"
-msgstr ""
+msgstr "Uredi obavjesti za %s"
 
 #: common/static/js/frepple.js:3691
 #, fuzzy
 msgid "Following"
-msgstr "Praćenja"
+msgstr "Pratim"
 
 #: common/static/js/frepple.js:3712
 msgid "Add followers"
-msgstr ""
+msgstr "Dodaj pratitelje"
 
 #: forecast/static/forecast/src/forecast.js:952
 msgid "Show descriptions"
-msgstr ""
+msgstr "Prikaži opis"
 
 #: input/static/operationplandetail/src/supplypositionpanelDrv.js:22
 msgid "inventory status"
-msgstr "Status zaliha"
+msgstr "status zaliha"
 
 #: input/static/operationplandetail/src/supplypositionpanelDrv.js:29
 msgid "onhand at lead time"
-msgstr "Dostupno na lead time"
+msgstr "dostupno na lead time"
 
 #: input/static/operationplandetail/src/supplypositionpanelDrv.js:63
 msgid "current inventory"
@@ -423,7 +424,7 @@ msgstr "sekundi"
 #: planningboard/static/planningboard/src/planningboard.js:950
 #: planningboard/static/planningboard/src/planningboard.js:951
 msgid "hours"
-msgstr "Sati"
+msgstr "sati"
 
 #: planningboard/static/planningboard/src/planningboard.js:954
 #: planningboard/static/planningboard/src/planningboard.js:955
@@ -453,12 +454,12 @@ msgid ""
 "Please enter a correct %(username)s and password. Note that both fields may "
 "be case-sensitive."
 msgstr ""
-"Unesite ispravno %(username)s i lozinku. Imajte na umu da oba polja mogu "
-"biti velika i mala slova."
+"Unesite ispravno %(username)s i lozinku. Imajte na umu da oba polja razlikuju "
+"velika i mala slova."
 
 #: admin.py:24
 msgid "This user is inactive."
-msgstr ""
+msgstr "Ovaj korisnik nije aktvan"
 
 #: archive/models.py:44 common/models.py:642 common/models.py:679
 #: common/models.py:919 common/models.py:993 common/models.py:1438
@@ -482,7 +483,7 @@ msgstr ""
 #: inventoryplanning/views.py:221 reportmanager/models.py:20
 #: reportmanager/models.py:103 reportmanager/views.py:119
 msgid "identifier"
-msgstr ""
+msgstr "identifikator"
 
 #: archive/models.py:62 archive/models.py:89 archive/models.py:132
 #: forecast/models.py:65 forecast/models.py:326 forecast/views.py:111
@@ -632,7 +633,7 @@ msgstr ""
 #: wizard/templates/wizard/quickstart_forecast.html:56
 #: wizard/templates/wizard/quickstart_production.html:382
 msgid "item"
-msgstr "artikal"
+msgstr "artikl"
 
 #: archive/models.py:63 archive/models.py:93 archive/models.py:146
 #: forecast/models.py:68 forecast/models.py:334 forecast/views.py:118
@@ -860,7 +861,7 @@ msgstr "rok"
 #: inventoryplanning/templates/inventoryplanning/drp.html:176
 #: quoting/views.py:92 shopfloor/templates/shopfloor/manufacturingorder.html:29
 msgid "status"
-msgstr "Status"
+msgstr "status"
 
 #: archive/models.py:97 forecast/models.py:80 forecast/views.py:134
 #: input/models/calendar.py:286 input/models/demand.py:95
@@ -916,7 +917,7 @@ msgstr "datum isporuke"
 
 #: archive/models.py:101 input/models/demand.py:134 input/views/sales.py:327
 msgid "planned quantity"
-msgstr "quantità pianificata"
+msgstr "planirana količina"
 
 #: archive/models.py:117 input/models/operationplan.py:78
 #: input/models/operationplan.py:535 input/models/operationplan.py:609
@@ -926,7 +927,7 @@ msgstr "quantità pianificata"
 #: inventoryplanning/templates/inventoryplanning/drp.html:160
 #: shelflife/views.py:145 shelflife/views.py:456
 msgid "reference"
-msgstr ""
+msgstr "referenca"
 
 #: archive/models.py:119 common/models.py:681 common/models.py:929
 #: common/models.py:1002 common/models.py:1519 common/views.py:503
@@ -1096,15 +1097,15 @@ msgstr "operacija"
 #: output/views/resource.py:181 quoting/views.py:88 shelflife/views.py:289
 #: shelflife/views.py:336 shelflife/views.py:565 shelflife/views.py:612
 msgid "owner"
-msgstr "Vlasnik"
+msgstr "vlasnik"
 
 #: archive/models.py:134
 msgid "item cost"
-msgstr ""
+msgstr "trošak stavke"
 
 #: archive/models.py:137
 msgid "itemsupplier cost"
-msgstr ""
+msgstr "trošak nabave"
 
 #: archive/models.py:140 input/models/itemdistribution.py:47
 #: input/models/operationplan.py:167 input/views/inventory.py:370
@@ -1155,7 +1156,7 @@ msgstr "odredište"
 #: output/views/operation.py:671 output/widget.py:1216 output/widget.py:1466
 #: wizard/templates/wizard/quickstart_production.html:123
 msgid "supplier"
-msgstr "Artikellieferant"
+msgstr "dobavljač"
 
 #: archive/models.py:148 input/models/operationplan.py:203
 #: input/views/manufacturing.py:2101 input/views/sales.py:589
@@ -1167,15 +1168,15 @@ msgstr "potražnja"
 
 #: archive/widget.py:28
 msgid "Inventory history"
-msgstr ""
+msgstr "Povijest skladišta"
 
 #: archive/widget.py:29
 msgid "Show the history of the on hand inventory"
-msgstr ""
+msgstr "Pokaži povijest raspoloživih količina"
 
 #: archive/widget.py:172
 msgid "Demand history"
-msgstr ""
+msgstr "Povijest potražnje"
 
 #: archive/widget.py:173
 msgid "Show the evolution of the open sales orders"
@@ -1183,11 +1184,11 @@ msgstr ""
 
 #: archive/widget.py:337
 msgid "Purchase order history"
-msgstr ""
+msgstr "Povijest nabave"
 
 #: archive/widget.py:338
 msgid "Show the evolution of the open purchase orders"
-msgstr ""
+msgstr "Prikaži razvoj otvorenih narudžbi"
 
 #: common/admin.py:28 common/admin.py:39
 msgid "Personal info"
@@ -1199,15 +1200,15 @@ msgstr "lozinka"
 
 #: common/admin.py:32
 msgid "scenario access"
-msgstr ""
+msgstr "pristup scenariju"
 
 #: common/admin.py:43
 msgid "Permissions in this scenario"
-msgstr "Berechtigungen"
+msgstr "Ovlasti u ovom scenariju"
 
 #: common/admin.py:46
 msgid "Important dates"
-msgstr "Wichtige Termine"
+msgstr "Bitni datumi"
 
 #: common/admin.py:52 common/admin.py:86 common/admin.py:106
 #: common/admin.py:139 common/admin.py:159 common/admin.py:179
@@ -1247,60 +1248,60 @@ msgstr "poruke"
 #: common/adminforms.py:329 common/adminforms.py:358
 #, python-brace-format
 msgid "The {name} \"{obj}\" was added successfully."
-msgstr ""
+msgstr "{name} \"{obj}\" je uspješno dodan."
 
 #: common/adminforms.py:331
 msgid "You may edit it again below."
-msgstr ""
+msgstr "Možete ponovo urediti ispod."
 
 #: common/adminforms.py:344
 #, python-brace-format
 msgid ""
 "The {name} \"{obj}\" was added successfully. You may add another {name} "
 "below."
-msgstr ""
+msgstr "{name} \"{obj}\" je uspješno dodan. Možete dodati još jedan {name} "
 
 #: common/adminforms.py:462
 #, python-brace-format
 msgid ""
 "The {name} \"{obj}\" was changed successfully. You may edit it again below."
-msgstr ""
+msgstr "{name} \"{obj}\" je uspješno izmjenjen. Možete ga ponovo urediti ispod."
 
 #: common/adminforms.py:477
 #, python-brace-format
 msgid ""
 "The {name} \"{obj}\" was added successfully. You may edit it again below."
-msgstr ""
+msgstr "{name} \"{obj}\" je uspješno dodan. Možete ga ponovo urediti ispod."
 
 #: common/adminforms.py:496
 #, python-brace-format
 msgid ""
 "The {name} \"{obj}\" was changed successfully. You may add another {name} "
 "below."
-msgstr ""
+msgstr "{name} \"{obj}\" je izmjenjen uspješno. Možete dodati još jedan {name} "
 
 #: common/adminforms.py:513
 #, python-brace-format
 msgid "The {name} \"{obj}\" was changed successfully."
-msgstr ""
+msgstr "{name} \"{obj}\" je izmjenjen uspješno."
 
 #: common/adminforms.py:626 reportmanager/views.py:668
 #, python-format
 msgid "The %(name)s \"%(obj)s\" was deleted successfully."
-msgstr "%(name)s \"%(obj)s\" uspješno izbrisan."
+msgstr "%(name)s \"%(obj)s\" je uspješno izbrisan."
 
 #: common/adminforms.py:719
 #, fuzzy
 msgid "delete"
-msgstr "Ukloni"
+msgstr "briši"
 
 #: common/adminforms.py:759
 msgid "Required."
-msgstr ""
+msgstr "Obavezno."
 
 #: common/adminforms.py:761 common/adminforms.py:764
 msgid "Required. Max 30 characters."
-msgstr ""
+msgstr "Obavezno. Max 30 znakova."
 
 #: common/api/views.py:40
 msgid "REST API Help"
@@ -1329,8 +1330,8 @@ msgid ""
 "%(rows)d data rows, changed %(changed)d and added %(added)d records, "
 "%(errors)d errors, %(warnings)d warnings"
 msgstr ""
-"%(rows)d Datensätze,, geändert %(changed)d und hinzugefügt %(added)d Sätze, "
-"%(errors)d Fehler, %(warnings)d Warnung"
+"%(rows)d podatkovnih redaka, izmjenjeno %(changed)d i dodano %(added)d zapisa, "
+"%(errors)d grešaka, %(warnings)d upozorenja"
 
 #: common/dataload.py:722 common/dataload.py:731
 msgid "Select a valid choice. That choice is not one of the available choices."
@@ -1338,11 +1339,11 @@ msgstr "Izaberite ispravnu opciju. Ta opcija nije jedna od dostupnih opcija."
 
 #: common/localization.py:31 common/localization.py:49
 msgid "Invalid date format"
-msgstr ""
+msgstr "Neispravan format datuma"
 
 #: common/menu.py:117
 msgid "Documentation"
-msgstr "Dokumentation"
+msgstr "Dokumentacija"
 
 #: common/menu.py:126
 msgid "REST API help"
@@ -1350,7 +1351,7 @@ msgstr "Rest API pomoć"
 
 #: common/menu.py:136
 msgid "frePPLe website"
-msgstr "posjetite stranicu"
+msgstr "frePPle webstranica"
 
 #: common/menu.py:141
 msgid "About frePPLe"
@@ -1358,7 +1359,7 @@ msgstr "O Frepple"
 
 #: common/middleware.py:234 common/middleware.py:240
 msgid "Your session has expired. Please login again to continue."
-msgstr ""
+msgstr "Vaša sesija je istekla. Molimo prijavite se ponovo za nastavak."
 
 #: common/models.py:56 forecast/models.py:1193 input/models/demand.py:41
 #: input/models/operationplan.py:81 input/models/resource.py:179
@@ -1416,7 +1417,7 @@ msgstr "Hijerarhijski nadređeni"
 #: shelflife/views.py:260 shelflife/views.py:296 shelflife/views.py:345
 #: shelflife/views.py:536 shelflife/views.py:572 shelflife/views.py:621
 msgid "source"
-msgstr "Izvor"
+msgstr "izvor"
 
 #: common/models.py:260 common/models.py:401 common/models.py:715
 #: common/report.py:399 execute/templates/commands/emailreport.html:19
@@ -1530,7 +1531,7 @@ msgstr "parametar"
 
 #: common/models.py:300 common/views.py:460
 msgid "parameters"
-msgstr "Parametri"
+msgstr "parametri"
 
 #: common/models.py:311 output/models.py:71
 #: output/templates/output/resource.html:284
@@ -1557,7 +1558,7 @@ msgstr "scenariji"
 #: common/report.py:1177 common/report.py:1194 common/report.py:3351
 #: common/report.py:3758 execute/templates/commands/scenario_copy.html:20
 msgid "scenario"
-msgstr "Scenarij"
+msgstr "scenarij"
 
 #: common/models.py:372
 msgid "Detect automatically"
@@ -1570,16 +1571,16 @@ msgstr "jezik"
 
 #: common/models.py:378 common/templates/common/preferences.html:96
 msgid "theme"
-msgstr "Tema"
+msgstr "tema"
 
 #: common/models.py:384 common/templates/common/preferences.html:85
 msgid "page size"
-msgstr "Veličina stranice"
+msgstr "veličina stranice"
 
 #: common/models.py:409 common/templates/common/preferences.html:116
 #: common/views.py:177
 msgid "default scenario"
-msgstr ""
+msgstr "zadani scenario"
 
 #: common/models.py:558 common/models.py:645 common/models.py:708
 #: common/models.py:926 common/models.py:997 common/views.py:497
@@ -1596,7 +1597,7 @@ msgstr "korisnici"
 #: execute/templates/commands/scheduletasks.html:182
 #: input/templates/input/calendardetail.html:28
 msgid "Add"
-msgstr "Novi unos"
+msgstr "Dodaj"
 
 #: common/models.py:674 common/templates/admin/edit_inline/tabular.html:41
 msgid "Change"
@@ -1634,15 +1635,15 @@ msgstr "Komentar"
 
 #: common/models.py:921 common/views.py:610
 msgid "model name"
-msgstr ""
+msgstr "naziv modela"
 
 #: common/models.py:923 common/views.py:616
 msgid "object name"
-msgstr ""
+msgstr "naziv objekta"
 
 #: common/models.py:984
 msgid "followers"
-msgstr "sljedbenika"
+msgstr "sljedbenici"
 
 #: common/models.py:1023
 msgid "notification"
@@ -1650,7 +1651,7 @@ msgstr "obavijest"
 
 #: common/models.py:1024
 msgid "notifications"
-msgstr ""
+msgstr "obavijesti"
 
 #: common/models.py:1414 input/models/resource.py:44
 #: input/templates/input/operationplanreport.html:340
@@ -1687,48 +1688,48 @@ msgstr "Više vrijednosti ukazuju na detaljnije vremenske skupove"
 #: common/report.py:3691 common/views.py:665 forecast/models.py:379
 #: forecast/models.py:509
 msgid "bucket"
-msgstr "Skup"
+msgstr "skup"
 
 #: common/models.py:1430 common/views.py:627 input/models/resource.py:43
 #: input/models/resource.py:44 input/models/resource.py:45
 #: input/models/resource.py:46
 msgid "buckets"
-msgstr "Skupovi"
+msgstr "skupovi"
 
 #: common/models.py:1459
 msgid "bucket date"
-msgstr "Vremenski skup"
+msgstr "vremenski skup"
 
 #: common/models.py:1460
 #: common/templates/admin/common/bucket/change_form.html:12 common/views.py:648
 msgid "bucket dates"
-msgstr "Vremenski skupovi"
+msgstr "vremenski skupovi"
 
 #: common/models.py:1469
 msgid "string"
-msgstr ""
+msgstr "slova"
 
 #: common/models.py:1470
 msgid "boolean"
-msgstr ""
+msgstr "bool"
 
 #: common/models.py:1471 forecast/models.py:1189
 msgid "number"
-msgstr ""
+msgstr "broj"
 
 #: common/models.py:1472
 msgid "integer"
-msgstr ""
+msgstr "cjeli broj"
 
 #: common/models.py:1473 forecast/widget.py:396
 #: input/models/operationplan.py:615 input/views/inventory.py:1760
 #: inventoryplanning/templates/inventoryplanning/drp.html:166
 msgid "date"
-msgstr "Datum/vrijeme"
+msgstr "datum"
 
 #: common/models.py:1474
 msgid "datetime"
-msgstr ""
+msgstr "datum/vrijeme"
 
 #: common/models.py:1475 execute/views.py:153 input/models/operation.py:149
 #: input/models/resource.py:274 input/views/capacity.py:131
@@ -1763,25 +1764,25 @@ msgstr "oznaka"
 
 #: common/models.py:1521 common/views.py:722
 msgid "editable"
-msgstr ""
+msgstr "moguće urediti"
 
 #: common/models.py:1523 common/views.py:726 forecast/models.py:1244
 #: forecast/views.py:362
 msgid "initially hidden"
-msgstr ""
+msgstr "inicijalno sakriven"
 
 #: common/models.py:1542 forecast/models.py:1292
 msgid "Name can only be alphanumeric"
-msgstr ""
+msgstr "naziv može biti samo slova i brojke"
 
 #: common/models.py:1584
 msgid "attribute"
-msgstr ""
+msgstr "atribut"
 
 #: common/models.py:1585 common/views.py:679
 #: inventoryplanning/templates/inventoryplanning/drp.html:2607
 msgid "attributes"
-msgstr "Atributi"
+msgstr "atributi"
 
 #: common/report.py:449
 #: inventoryplanning/templates/inventoryplanning/drp.html:292
@@ -1806,7 +1807,7 @@ msgstr "Da"
 #: reportmanager/views.py:580 reportmanager/views.py:619 retail/views.py:30
 #: retail/views.py:122 retail/views.py:210 shopfloor/views.py:43
 msgid "Permission denied"
-msgstr ""
+msgstr "Pristup odbijen"
 
 #: common/report.py:1044 common/report.py:3669 common/report.py:3698
 #: execute/views.py:1164 execute/views.py:1207
@@ -2047,15 +2048,15 @@ msgstr "pomoć"
 #: common/templates/admin/base_site_gridpivot.html:229
 #: input/templates/input/operationplanreport.html:321
 msgid "display table"
-msgstr "Prikaži tablicu"
+msgstr "prikaži tablicu"
 
 #: common/templates/admin/base_site_gridpivot.html:232
 msgid "display graph"
-msgstr "Prikaži grafiku"
+msgstr "prikaži grafiku"
 
 #: common/templates/admin/base_site_gridpivot.html:240
 msgid "configure time buckets"
-msgstr "Konfiguriraj vremenske skupove"
+msgstr "konfiguriraj vremenske skupove"
 
 #: common/templates/admin/base_site_gridpivot.html:255
 msgid "Help"
@@ -2064,21 +2065,21 @@ msgstr "Pomoć"
 #: common/templates/admin/base_site_nav.html:67
 #, python-format
 msgid "Your license expired %(x)s days ago"
-msgstr ""
+msgstr "Vaša licenca je istekla pred %(x)s dana"
 
 #: common/templates/admin/base_site_nav.html:70
 msgid "License expired"
-msgstr ""
+msgstr "Licenca je istekla"
 
 #: common/templates/admin/base_site_nav.html:76
 #, python-format
 msgid "Your license expires in %(x)s days"
-msgstr ""
+msgstr "Vaša licenca ističe za %(x)s dana"
 
 #: common/templates/admin/base_site_nav.html:81
 #, fuzzy
 msgid "days left"
-msgstr "dana prije"
+msgstr "dana preostalo"
 
 #: common/templates/admin/base_site_nav.html:95
 msgid "preferences"
@@ -2092,19 +2093,21 @@ msgstr "Odjava"
 #: common/views.py:119 wizard/views.py:99
 #, fuzzy
 msgid "home"
-msgstr "home"
+msgstr "početna"
 
 #: common/templates/admin/base_site_nav.html:123
 msgid ""
 "Select a what-if scenario.<br>Click <a class='text-decoration-underline' "
 "href='/execute/#scenario_copy'>here</a> to manage scenarios."
 msgstr ""
+"Odaberite što-ako scenario.<br>Kliknite <a class='text-decoration-underline' "
+"href='/execute/#scenario_copy'>ovdje</a> za upravljanje scenarijima."
 
 #: common/templates/admin/change_form.html:91
 #: common/templates/admin/login.html:82
 #: common/templates/auth/change_password.html:17
 msgid "Please correct the error below."
-msgstr ""
+msgstr "Molimo ispravite grešku ispod."
 
 #: common/templates/admin/change_form.html:92
 #: common/templates/admin/login.html:83
@@ -2125,7 +2128,7 @@ msgstr "Molimo ispravite navedene greške."
 #: input/templates/admin/input/skill/change_form.html:8
 #: input/templates/admin/input/supplier/change_form.html:8
 msgid "related"
-msgstr ""
+msgstr "povezano"
 
 #: common/templates/admin/delete_confirmation.html:24
 #, python-format
@@ -2169,7 +2172,7 @@ msgstr "Objekti"
 
 #: common/templates/admin/edit_inline/tabular.html:26
 msgid "Delete?"
-msgstr "Izbriši?"
+msgstr "Briši?"
 
 #: common/templates/admin/edit_inline/tabular.html:45
 msgid "View on site"
@@ -2178,7 +2181,7 @@ msgstr "Pogledaj na stranicama"
 #: common/templates/admin/edit_inline/tabular.html:83
 #, python-format
 msgid "Only %(limit)s out of %(count)s records are shown."
-msgstr ""
+msgstr "Samo %(limit)s od %(count)s zapisa je prikazano."
 
 #: common/templates/admin/edit_inline/tabular.html:138
 #, python-format
@@ -2212,16 +2215,16 @@ msgid ""
 "The user \"admin\" has password \"admin\".<br>\n"
 "We suggest changing this password."
 msgstr ""
-"Korisnik \"Admin\" ima \"Admin\".<br>\n"
+"Korisnik \"Admin\" ima lozinku\"Admin\".<br>\n"
 "Molimo vas da to ispravite."
 
 #: common/templates/admin/submit_line.html:5
 msgid "Save as new"
-msgstr "Spremi kao novi unos"
+msgstr "Spremi kao novi"
 
 #: common/templates/admin/submit_line.html:6
 msgid "Save and add another"
-msgstr "Spremi i unesi novi unos"
+msgstr "Spremi i dodaj novi"
 
 #: common/templates/admin/submit_line.html:7
 msgid "Save and continue editing"
@@ -2229,7 +2232,7 @@ msgstr "Spremi i nastavi uređivati"
 
 #: common/templates/admin/subtemplate_inventorystatus.html:162
 msgid "current onhand"
-msgstr "Dostupno"
+msgstr "trenutno raspoloživo"
 
 #: common/templates/admin/subtemplate_timebuckets.html:7
 msgid "time buckets"
@@ -2246,11 +2249,11 @@ msgstr "od"
 
 #: common/templates/admin/subtemplate_timebuckets.html:37
 msgid "till"
-msgstr ""
+msgstr "do"
 
 #: common/templates/admin/subtemplate_timebuckets.html:47
 msgid "before till"
-msgstr ""
+msgstr "prije"
 
 #: common/templates/admin/subtemplate_timebuckets.html:52
 #: common/templates/admin/subtemplate_timebuckets.html:57
@@ -2266,7 +2269,7 @@ msgstr "Mjeseci"
 
 #: common/templates/admin/subtemplate_timebuckets.html:61
 msgid "after current date"
-msgstr ""
+msgstr "nakon trenutnog datuma"
 
 #: common/templates/auth/change_password.html:21
 #, python-format
@@ -2280,7 +2283,7 @@ msgstr "Promijeni lozinku"
 
 #: common/templates/common/comments.html:30
 msgid "Add an attachment"
-msgstr ""
+msgstr "Dodaj prilog"
 
 #: common/templates/common/follower.html:31
 #: common/templates/common/inbox.html:92 common/views.py:889
@@ -2293,7 +2296,7 @@ msgstr ""
 #: common/views.py:620
 #, fuzzy
 msgid "following"
-msgstr "sljedeće"
+msgstr "prate"
 
 #: common/templates/common/inbox.html:85
 msgid "Unread"
@@ -2301,19 +2304,19 @@ msgstr "Nepročitane"
 
 #: common/templates/common/inbox.html:111
 msgid "Select/unselect all messages"
-msgstr ""
+msgstr "Označi/Odznači sve poruke"
 
 #: common/templates/common/inbox.html:141
 msgid "Mark message unread"
-msgstr ""
+msgstr "Označi poruku nepročitanom"
 
 #: common/templates/common/inbox.html:144
 msgid "Mark message read"
-msgstr ""
+msgstr "Označi poruku pročitanom"
 
 #: common/templates/common/preferences.html:89
 msgid "Number of records per page"
-msgstr "Broj zapisa na stranici"
+msgstr "Broj zapisa po stranici"
 
 #: common/templates/common/preferences.html:134 common/views.py:417
 msgid "avatar"
@@ -2342,17 +2345,17 @@ msgstr "Potvrda nove lozinke"
 
 #: common/templates/common/snippet_favorites.html:4
 msgid "Bookmark your favorite report configurations"
-msgstr ""
+msgstr "Označi svoje omiljene konfiguraciju izvještaja"
 
 #: common/templates/common/snippet_favorites.html:16
 #: reportmanager/templates/reportmanager/reportmanager.html:167
 #, fuzzy
 msgid "save"
-msgstr "uštedi"
+msgstr "spremi"
 
 #: common/templates/common/snippet_follow.html:8
 msgid "Manage notifications in your inbox"
-msgstr ""
+msgstr "Upravljaj obavjestima u sandučiću ulazne pošte"
 
 #: common/templates/common/snippet_follow.html:14
 msgid "Get a notification in your inbox when there is activity"
@@ -2364,7 +2367,7 @@ msgstr "nije uspjelo"
 
 #: common/templates/registration/forgotpassword_form.html:75
 msgid "Email me a password reset link"
-msgstr ""
+msgstr "Pošalji mi poveznicu za obnovu lozinke na mail"
 
 #: common/templates/registration/password_change_done.html:8
 #: common/templates/registration/password_change_form.html:9
@@ -2418,7 +2421,7 @@ msgstr ""
 #: common/templates/rest_framework/api.html:63
 #, python-format
 msgid "Make a GET request to read %(model)s object(s)"
-msgstr "Make a GET request to read %(model)s object(s)"
+msgstr "Napravite GET request za čitanje objekata sa modela %(model)s "
 
 #: common/templates/rest_framework/api.html:71
 #: common/templates/rest_framework/api.html:72
@@ -2599,7 +2602,7 @@ msgstr "posljednja prijava"
 
 #: common/views.py:521
 msgid "attachment"
-msgstr ""
+msgstr "prilog"
 
 #: common/widget.py:27 settings.py:400
 msgid "Welcome"
@@ -2651,7 +2654,7 @@ msgstr "Prikaži najnovije vijesti s web stranice FrePPLe."
 
 #: common/widget.py:99
 msgid "Unread messages from your inbox"
-msgstr ""
+msgstr "Nepročitane poruke iz vaše ulazne pošte"
 
 #: demandhits/attributes.py:21 demandhits/attributes.py:42
 #, python-format
@@ -2695,7 +2698,7 @@ msgstr ""
 #: execute/management/commands/backup.py:213
 #, fuzzy
 msgid "Contact frePPLe support"
-msgstr "Izvješće o ograničenju"
+msgstr "Kontaktiraje frePPle podršku"
 
 #: execute/management/commands/createbuckets.py:298
 msgid "Generate buckets"
@@ -2711,7 +2714,7 @@ msgstr "Ispraznite bazu"
 
 #: execute/management/commands/exporttofolder.py:509
 msgid "Export plan result"
-msgstr ""
+msgstr "Izvoz rezultata planiranja"
 
 #: execute/management/commands/exportworkbook.py:33
 msgid "Export a spreadsheet"
@@ -2719,7 +2722,7 @@ msgstr "Export tablice"
 
 #: execute/management/commands/importfromfolder.py:519
 msgid "Import data files"
-msgstr ""
+msgstr "Uvoz podataka iz datoteke"
 
 #: execute/management/commands/importworkbook.py:152 execute/views.py:1361
 #, python-format
@@ -2734,7 +2737,7 @@ msgstr "Nije ovlašteno za stvaranje novog unosa %s"
 #: execute/management/commands/importworkbook.py:182
 #, python-format
 msgid "Processing data in worksheet: %s"
-msgstr "Podaci se obrađuju: %s"
+msgstr "Podaci se obrađuju sa lista: %s"
 
 #: execute/management/commands/importworkbook.py:295
 #: execute/management/commands/importworkbook.py:317 execute/views.py:1460
@@ -2760,15 +2763,15 @@ msgstr "upravljanje scenarijem"
 
 #: execute/management/commands/scheduletasks.py:377
 msgid "Group and schedule tasks"
-msgstr ""
+msgstr "Grupiraj i zakaži zadatke"
 
 #: execute/management/commands/scheduletasks.py:377
 msgid "Group tasks"
-msgstr ""
+msgstr "Grupiraj zadatke"
 
 #: execute/management/commands/uploadreport.py:278
 msgid "Publish reports by FTP"
-msgstr ""
+msgstr "Pošalji izvještaje na FTP"
 
 #: execute/menu.py:20 execute/widget.py:20
 msgid "Execute"
@@ -2776,11 +2779,11 @@ msgstr "Izvrši"
 
 #: execute/models.py:37 execute/models.py:40 execute/views.py:111
 msgid "submitted"
-msgstr "poslano"
+msgstr "predano"
 
 #: execute/models.py:38 execute/views.py:114
 msgid "started"
-msgstr "Započeto"
+msgstr "započeto"
 
 #: execute/models.py:43 execute/templates/commands/scheduletasks.html:86
 #: execute/templates/commands/scheduletasks.html:196 execute/views.py:142
@@ -2801,11 +2804,11 @@ msgstr "zadatak"
 
 #: execute/models.py:101
 msgid "scheduled tasks"
-msgstr ""
+msgstr "zakazani zadaci"
 
 #: execute/models.py:102
 msgid "scheduled task"
-msgstr ""
+msgstr "zakazani zadatak"
 
 #: execute/templates/commands/backup.html:5
 #: execute/templates/commands/createbuckets.html:7
@@ -2827,7 +2830,7 @@ msgstr ""
 
 #: execute/templates/commands/createbuckets.html:10
 msgid "create time buckets for reporting."
-msgstr ""
+msgstr "kreirajte vremenske periode za izvještavanje"
 
 #: execute/templates/commands/createbuckets.html:24
 msgid "week starts on"
@@ -2878,7 +2881,7 @@ msgstr "Subota"
 
 #: execute/templates/commands/createbuckets.html:44
 msgid "day name"
-msgstr ""
+msgstr "naziv dana"
 
 #: execute/templates/commands/createbuckets.html:50
 msgid "week name"
@@ -2886,11 +2889,11 @@ msgstr "naziv tjedna"
 
 #: execute/templates/commands/createbuckets.html:56
 msgid "month name"
-msgstr ""
+msgstr "naziv mjeseca"
 
 #: execute/templates/commands/createbuckets.html:62
 msgid "quarter name"
-msgstr ""
+msgstr "naziv kvartala"
 
 #: execute/templates/commands/createbuckets.html:68
 msgid "year name"
@@ -2899,7 +2902,7 @@ msgstr "naziv godine"
 #: execute/templates/commands/emailreport.html:6
 #: execute/templates/commands/uploadreport.html:6
 msgid "publish"
-msgstr ""
+msgstr "objavi"
 
 #: execute/templates/commands/emailreport.html:9
 msgid ""
@@ -2912,7 +2915,7 @@ msgstr ""
 #: execute/templates/commands/importfromfolder.html:14
 #: execute/templates/commands/uploadreport.html:16
 msgid "file name"
-msgstr ""
+msgstr "naziv datoteke"
 
 #: execute/templates/commands/emailreport.html:18
 #: execute/templates/commands/exporttofolder.html:15
@@ -2927,11 +2930,11 @@ msgstr ""
 
 #: execute/templates/commands/emailreport.html:67
 msgid "please correct invalid email addresses"
-msgstr ""
+msgstr "molimo ispravite neispravne email adrese"
 
 #: execute/templates/commands/emailreport.html:72
 msgid "please enter email addresses"
-msgstr ""
+msgstr "molimo unesite email adresu"
 
 #: execute/templates/commands/empty.html:7
 msgid "Erase selected tables."
@@ -2940,7 +2943,7 @@ msgstr "Izbrišite odabrane tablice."
 #: execute/templates/commands/empty.html:9
 #: execute/templates/commands/exportworkbook.html:18
 msgid "data tables"
-msgstr "Tablice podataka"
+msgstr "tablice podataka"
 
 #: execute/templates/commands/empty.html:19
 #: execute/templates/commands/exportworkbook.html:31
@@ -2949,14 +2952,14 @@ msgstr "Tablice administratora"
 
 #: execute/templates/commands/empty.html:30
 msgid "plan history"
-msgstr ""
+msgstr "povijest planiranja"
 
 #: execute/templates/commands/exporttofolder.html:9
 msgid ""
 "Exports the plan (purchase orders, distribution orders and manufacturing "
 "orders) as a set of CSV files."
 msgstr ""
-"Izvezi plan (narudžbenice, porudžbine, proizvodni nalozi) kaoSkup CSV "
+"Izvezi plan (narudžbenice, porudžbine, proizvodni nalozi) kao skup CSV "
 "datoteka."
 
 #: execute/templates/commands/exporttofolder.html:16
@@ -2967,23 +2970,23 @@ msgstr "promjenjeno"
 #: execute/templates/commands/exporttofolder.html:19
 #: execute/templates/commands/importfromfolder.html:19
 msgid "Download all files"
-msgstr ""
+msgstr "Preuzmi sve datoteke"
 
 #: execute/templates/commands/exporttofolder.html:25
 #: execute/templates/commands/importfromfolder.html:25
 msgid "Delete all files"
-msgstr ""
+msgstr "Briši sve datoteke"
 
 #: execute/templates/commands/exporttofolder.html:57
 #: execute/templates/commands/importfromfolder.html:170
 msgid "You are about to delete all files"
-msgstr "U vezi s brisanjem svih datoteka"
+msgstr "Započinjete s brisanjem svih datoteka"
 
 #: execute/templates/commands/exporttofolder.html:61
 #: execute/templates/commands/importfromfolder.html:174
 #, python-format
 msgid "You are about to delete file %%s"
-msgstr "Vi ste o brisanju datoteke %%s"
+msgstr "Započinjete brisanje datoteke %%s"
 
 #: execute/templates/commands/exporttofolder.html:67
 #: execute/templates/commands/importfromfolder.html:42
@@ -2995,13 +2998,13 @@ msgstr "Izbriši datoteku"
 #: execute/templates/commands/exporttofolder.html:86
 #: execute/templates/commands/importfromfolder.html:199
 msgid "All data files were deleted"
-msgstr ""
+msgstr "Sve podatkovne datoteke su izbrisane"
 
 #: execute/templates/commands/exporttofolder.html:88
 #: execute/templates/commands/importfromfolder.html:201
 #, python-format
 msgid "File %%s was deleted"
-msgstr ""
+msgstr "Datoteka %%s je obrisana"
 
 #: execute/templates/commands/exporttofolder.html:102
 #: execute/templates/commands/exporttofolder.html:108
@@ -3010,7 +3013,7 @@ msgstr ""
 #: execute/templates/commands/importfromfolder.html:222
 #, python-format
 msgid "File %%s was not deleted"
-msgstr ""
+msgstr "Datoteka %%s nije obrisana"
 
 #: execute/templates/commands/exportworkbook.html:11
 msgid ""
@@ -3021,7 +3024,7 @@ msgstr ""
 #: execute/templates/commands/importfromfolder.html:6
 #: execute/templates/commands/importworkbook.html:5
 msgid "import"
-msgstr "Uvoz"
+msgstr "uvoz"
 
 #: execute/templates/commands/importfromfolder.html:9
 msgid ""
@@ -3034,7 +3037,7 @@ msgstr ""
 
 #: execute/templates/commands/importfromfolder.html:37
 msgid "Download file"
-msgstr ""
+msgstr "Preuzmi datoteku"
 
 #: execute/templates/commands/importworkbook.html:8
 msgid ""
@@ -3050,7 +3053,7 @@ msgstr "Učitavanje dostupnih podataka."
 
 #: execute/templates/commands/loaddata.html:27
 msgid "Execute plan after loading is done"
-msgstr ""
+msgstr "Izvrši planiranje nakon učitavanja podataka"
 
 #: execute/templates/commands/loaddata.html:47
 #: execute/templates/execute/execute.html:245
@@ -3061,6 +3064,7 @@ msgstr "Izvinite, nemate nijednu dozvolu izvršenja ..."
 msgid ""
 "Load all input data, run the planning algorithm, and export the results."
 msgstr ""
+"Učitaj sve ulazne podatke, pokreni algoritam planiranja, i izvezi rezultate"
 
 #: execute/templates/commands/runplan.html:10
 msgid "optional planning steps"
@@ -3101,7 +3105,7 @@ msgstr ""
 #: output/templates/output/demand.html:160
 #: output/templates/output/demand_forecast.html:164
 msgid "constraints"
-msgstr "Ograničenja"
+msgstr "ograničenja"
 
 #: execute/templates/commands/runplan.html:44
 #, fuzzy
@@ -3149,14 +3153,14 @@ msgstr ""
 
 #: execute/templates/commands/scenario_copy.html:21
 msgid "action"
-msgstr ""
+msgstr "akcija"
 
 #: execute/templates/commands/scenario_copy.html:24
 msgid ""
 "<b>In use</b>: Contains data<br><b>Free</b>: Available to copy data "
 "into<br><b>Busy</b>: Data copy in progress"
 msgstr ""
-"<b>U uporabi</b>: Sadrži podatke<br><b>Besplatno</b>: Dostupno za kopiranje "
+"<b>U uporabi</b>: Sadrži podatke<br><b>Slobodno</b>: Dostupno za kopiranje "
 "podataka u<br><b>Zauzeto</b>: Kopija podataka u tijeku"
 
 #: execute/templates/commands/scenario_copy.html:30
@@ -3165,16 +3169,16 @@ msgstr "Oznaka prikazana na padajućem popisu scenarija"
 
 #: execute/templates/commands/scenario_copy.html:35
 msgid "Date of the last state change"
-msgstr ""
+msgstr "Datum zadnje promjene statusa"
 
 #: execute/templates/commands/scenario_copy.html:51
 #: execute/templates/commands/scenario_copy.html:66
 msgid "manage"
-msgstr ""
+msgstr "upravljaj"
 
 #: execute/templates/commands/scenario_copy.html:55
 msgid "Copy from"
-msgstr ""
+msgstr "Kopiraj iz"
 
 #: execute/templates/commands/scenario_copy.html:58
 #, fuzzy
@@ -3183,28 +3187,28 @@ msgstr "Obnovi iz sigurnosne kopije"
 
 #: execute/templates/commands/scenario_copy.html:71
 msgid "Release: You will lose ALL data in this scenario!"
-msgstr ""
+msgstr "Otpusti: gubite sve podatke iz ovog scenarija!"
 
 #: execute/templates/commands/scenario_copy.html:76
 msgid "Promote: All data will be copied to Production"
-msgstr ""
+msgstr "Promoviraj: Svi podaci će biti kopirani u proizvodnju"
 
 #: execute/templates/commands/scenario_copy.html:85
 #, fuzzy
 msgid "Free"
-msgstr "Besplatno"
+msgstr "Slobodno"
 
 #: execute/templates/commands/scheduletasks.html:5
 msgid "Run a sequence of tasks, and schedule it to run automatically."
-msgstr ""
+msgstr "Pokreni seriju zadataka, i zakaži automatsko pokretanje."
 
 #: execute/templates/commands/scheduletasks.html:7
 msgid "Run a sequence of tasks."
-msgstr ""
+msgstr "Pokreni seriju zadataka"
 
 #: execute/templates/commands/scheduletasks.html:15
 msgid "next scheduled run"
-msgstr ""
+msgstr "sljedeće zakazano pokretanje"
 
 #: execute/templates/commands/scheduletasks.html:45
 #, fuzzy
@@ -3218,7 +3222,7 @@ msgstr "jedinstveno ime"
 #: execute/templates/commands/scheduletasks.html:91
 #: execute/templates/commands/scheduletasks.html:200
 msgid "abort on failure"
-msgstr ""
+msgstr "prekini na grešci"
 
 #: execute/templates/commands/scheduletasks.html:99
 #: execute/templates/commands/scheduletasks.html:208
@@ -3236,7 +3240,7 @@ msgstr "Pomakni gore"
 #: input/models/calendar.py:295 input/templates/input/calendardetail.html:76
 #: input/views/manufacturing.py:735 input/views/manufacturing.py:790
 msgid "start time"
-msgstr "Početno vrijeme"
+msgstr "početno vrijeme"
 
 #: execute/templates/commands/scheduletasks.html:129
 msgid "weekly schedule"
@@ -3272,16 +3276,16 @@ msgstr "Ned"
 
 #: execute/templates/commands/scheduletasks.html:156
 msgid "email on success"
-msgstr ""
+msgstr "email nakon uspjeha"
 
 #: execute/templates/commands/scheduletasks.html:159
 #: execute/templates/commands/scheduletasks.html:167
 msgid "List of emails, separated by commas"
-msgstr ""
+msgstr "Popis mail adresa, razdvojenih zarezima"
 
 #: execute/templates/commands/scheduletasks.html:164
 msgid "email on failure"
-msgstr ""
+msgstr "email nakon greške"
 
 #: execute/templates/commands/uploadreport.html:9
 msgid ""
@@ -3291,7 +3295,7 @@ msgstr ""
 
 #: execute/templates/execute/execute.html:40
 msgid "waiting"
-msgstr ""
+msgstr "na čekanju"
 
 #: execute/templates/execute/execute.html:42
 msgid "done"
@@ -3304,7 +3308,7 @@ msgstr "otkazano"
 
 #: execute/templates/execute/execute.html:65
 msgid "download"
-msgstr ""
+msgstr "preuzimanje"
 
 #: execute/templates/execute/execute.html:69 forecast/models.py:1188
 #, fuzzy
@@ -3313,15 +3317,15 @@ msgstr "pregled"
 
 #: execute/templates/execute/execute.html:212
 msgid "autorefresh"
-msgstr "Osvježi automatski"
+msgstr "osvježi automatski"
 
 #: execute/templates/execute/execute.html:220
 msgid "launch tasks"
-msgstr "Pokreni zadatke"
+msgstr "pokreni zadatke"
 
 #: execute/templates/execute/logfrepple.html:5
 msgid "download complete log file"
-msgstr "komplette Log-Datei herunterladen"
+msgstr "preuzimanje kompletnog loga"
 
 #: execute/views.py:89
 msgid "Task status"
@@ -3333,11 +3337,11 @@ msgstr "završeno"
 
 #: execute/views.py:350
 msgid "Failure launching task"
-msgstr ""
+msgstr "Greška pri pokretanju zadatka"
 
 #: execute/views.py:721
 msgid "Couldn't delete file"
-msgstr ""
+msgstr "Nije moguće brisanje datoteke"
 
 #: execute/views.py:747
 msgid "Displaying only the last 50K from the log file"
@@ -3346,7 +3350,7 @@ msgstr "Prikazivanje samo posljednjih 50K iz datoteke zapisa"
 #: execute/views.py:873
 #, python-format
 msgid "Filename extension must be among %(ext)s"
-msgstr ""
+msgstr "Ekstenzija datoteke mora biti među %(ext)s"
 
 #: execute/views.py:895
 msgid "Upload failed"
@@ -3362,7 +3366,7 @@ msgstr "Ništa nije dostupno za izvoz"
 
 #: execute/views.py:1335
 msgid "Processing file"
-msgstr ""
+msgstr "Obrađujem datoteku"
 
 #: execute/views.py:1346
 msgid "Unsupported file format."
@@ -3375,18 +3379,18 @@ msgstr "Stvorite ograničeni plan"
 #: executesql/menu.py:16 reportmanager/menu.py:51 reportmanager/models.py:96
 #: reportmanager/views.py:98
 msgid "my reports"
-msgstr ""
+msgstr "moji izvještaji"
 
 #: executesql/menu.py:22 executesql/views.py:52
 msgid "Execute SQL"
-msgstr ""
+msgstr "Izvrši SQL"
 
 #: forecast/admin.py:40 input/admin.py:101 input/admin.py:137
 #: input/admin.py:188 input/admin.py:219 input/admin.py:256 input/admin.py:299
 #: input/admin.py:343 input/admin.py:399 input/admin.py:478 input/admin.py:598
 #: input/admin.py:635 input/admin.py:698 input/admin.py:739 input/admin.py:1042
 msgid "advanced"
-msgstr ""
+msgstr "napredno"
 
 #: forecast/admin.py:65 input/admin.py:271 input/admin.py:432
 #: input/admin.py:502 input/admin.py:666 input/admin.py:1067
@@ -3402,7 +3406,7 @@ msgstr "opskrbni put"
 #: output/views/operation.py:305 output/views/pegging.py:139
 #: output/views/resource.py:222
 msgid "plan"
-msgstr "Plan"
+msgstr "plan"
 
 #: forecast/admin.py:71 forecast/views.py:1156 input/admin.py:1070
 #: output/views/constraint.py:147
@@ -3667,7 +3671,7 @@ msgstr "planirano"
 
 #: forecast/models.py:124
 msgid "Specifies whether this forecast record should be planned"
-msgstr ""
+msgstr "Određuje da li ova prognoza treba biti planirana"
 
 #: forecast/models.py:128 input/models/demand.py:84 input/views/sales.py:343
 #: quoting/views.py:82
@@ -3692,7 +3696,7 @@ msgstr "planovi predviđanja"
 
 #: forecast/models.py:523
 msgid "multiplier"
-msgstr ""
+msgstr "množitelj"
 
 #: forecast/models.py:630
 msgid "No editable fields found"
