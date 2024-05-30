@@ -2,7 +2,7 @@
 set(CMAKE_VERBOSE_MAKEFILE ON)
 cmake_minimum_required(VERSION 3.16)
 
-project(frepple VERSION 8.6.0)
+project(frepple VERSION 9.0.0)
 
 set(PROJECT_EDITION "Community Edition")
 set(PROJECT_BRANCH "community")
@@ -17,32 +17,15 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
       set(CPACK_GENERATOR "DEB")
       set(DISTRO "ubuntu20")
 
+    # Ubuntu 24
+    elseif(LINUX_ISSUE MATCHES "Ubuntu 24")
+      set(CPACK_GENERATOR "DEB")
+      set(DISTRO "ubuntu24")
+
     # Ubuntu development
     elseif(LINUX_ISSUE MATCHES "Ubuntu.*development")
       set(CPACK_GENERATOR "DEB")
       set(DISTRO "ubuntudevel")
-
-    # Debian case
-    elseif(LINUX_ISSUE MATCHES "Debian GNU/Linux 10")
-      set(CPACK_GENERATOR "DEB")
-      set(DISTRO "debian10")
-    elseif(EXISTS "/etc/redhat-release")
-      file(READ "/etc/redhat-release" REDHAT_RELEASE)
-
-      if(REDHAT_RELEASE MATCHES "Red Hat Enterprise Linux release 8")
-        set(CPACK_GENERATOR "RPM")
-        set(DISTRO "rhel8")
-      elseif(REDHAT_RELEASE MATCHES "Rocky Linux release 8")
-        set(CPACK_GENERATOR "RPM")
-        set(DISTRO "rockylinux8")
-      endif()
-    elseif(EXISTS "/etc/os-release")
-      file(READ "/etc/os-release" OS_RELEASE)
-
-      if(OS_RELEASE MATCHES "openSUSE Leap 15")
-        set(CPACK_GENERATOR "RPM")
-        set(DISTRO "opensuse15")
-      endif()
     endif()
   endif()
 
@@ -97,7 +80,7 @@ else()
   set(Python3_VENV "${PROJECT_SOURCE_DIR}/venv/bin")
 endif()
 
-find_package(Python3 3.6 COMPONENTS Interpreter Development REQUIRED)
+find_package(Python3 3.8 COMPONENTS Interpreter Development REQUIRED)
 add_custom_command(
   OUTPUT venv.stamp
   DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/requirements.txt" "${CMAKE_CURRENT_SOURCE_DIR}/requirements.dev.txt"
@@ -218,10 +201,6 @@ install(
 
 # Packaging of the django app: Python module in a virtual environment
 # Note that we use \$ to delay the evaluation till install time
-configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/setup.py.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/setup.py"
-)
 execute_process(
   COMMAND ${Python3_EXECUTABLE} -c "import sys; print(sys.prefix)"
   OUTPUT_VARIABLE PYTHON_PREFIX
@@ -232,8 +211,9 @@ install(CODE "execute_process(COMMAND mkdir -p \$ENV{DESTDIR}/${CMAKE_INSTALL_DA
 install(CODE "execute_process(COMMAND ${Python3_EXECUTABLE} -m venv \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv)")
 install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/activate)")
 install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/pip3 install pip install --upgrade pip wheel six appdirs setuptools)")
+install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/python3 -m pip install --quiet ${PROJECT_SOURCE_DIR})")
 install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/pip3 install -r ${CMAKE_SOURCE_DIR}/requirements.txt)")
-install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/python3 ${CMAKE_CURRENT_BINARY_DIR}/setup.py install --quiet)")
+install(CODE "execute_process(COMMAND \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin/python3 -m pip install --quiet ${PROJECT_SOURCE_DIR})")
 install(CODE "execute_process(COMMAND rm \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/lib64)")
 install(CODE "execute_process(COMMAND find \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv -type f -exec sed -i \"s|/usr/bin/env python$  |/usr/bin/env python3|g\" {} \;)")
 install(CODE "execute_process(COMMAND find \$ENV{DESTDIR}/${CMAKE_INSTALL_DATADIR}/frepple/venv/bin -type f -name \"*ctivate*\" -exec sed -i \"s|\$ENV{DESTDIR}||g\" {} \\;)")
@@ -334,6 +314,27 @@ if(valgrind)
     valgrind --tool=memcheck -v
     ${CMAKE_SOURCE_DIR}/bin/frepple
     ${CMAKE_SOURCE_DIR}/freppledb/common/commands.py
+  )
+  add_custom_target(
+    massif
+    DEPENDS venv
+    COMMAND ${CMAKE_COMMAND} -E
+    env
+    FREPPLE_HOME=${CMAKE_SOURCE_DIR}/bin
+    PYTHONPATH=${CMAKE_SOURCE_DIR}
+    DJANGO_SETTINGS_MODULE=freppledb.settings
+    FREPPLE_LOGFILE=frepple.log
+    LD_BIND_NOW=1
+    invplan=1
+    supply=1
+    nowebservice=1
+    constraint=13
+    plantype=1
+    PYTHONMALLOC=malloc
+    valgrind --tool=massif
+    ${CMAKE_SOURCE_DIR}/bin/frepple
+    ${CMAKE_SOURCE_DIR}/freppledb/common/commands.py
+    COMMAND ls -t massif.out.* | head -1 | xargs ms_print > memory_allocations.log
   )
 endif()
 

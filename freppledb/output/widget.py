@@ -224,7 +224,7 @@ class ManufacturingOrderWidget(Widget):
     def args(self):
         return "?%s" % urlencode({"fence1": self.fence1, "fence2": self.fence2})
 
-    javascript = """
+    javascript = r"""
     var margin_y = 70;  // Width allocated for the Y-axis
 
     var svg = d3.select("#mo_chart");
@@ -313,7 +313,7 @@ class ManufacturingOrderWidget(Widget):
         // Draw y-axis
         var yAxis = d3.svg.axis().scale(y_value)
             .orient("left")
-            .ticks(5)
+            .ticks(Math.min(Math.floor((svgrectangle['height'] - 10 - margin_x) / 20), 5))
             .tickFormat(d3.format("s"));
         svg.append("g")
         .attr("transform", "translate(" + margin_y + ", 10 )")
@@ -452,7 +452,7 @@ class ManufacturingOrderWidget(Widget):
             ),
         )
         result = [
-            '<select id="mo_selectButton"></select>',
+            '<select class="form-select form-select-sm d-inline-block w-auto" id="mo_selectButton"></select>',
             '<svg class="chart  mb-2" id="mo_chart" style="width:100%; height: 170px;"></svg>',
             '<table id="mo_overview" style="display: none">',
         ]
@@ -540,7 +540,7 @@ class DistributionOrderWidget(Widget):
     def args(self):
         return "?%s" % urlencode({"fence1": self.fence1, "fence2": self.fence2})
 
-    javascript = """
+    javascript = r"""
     var margin_y = 70;  // Width allocated for the Y-axis
     var svg = d3.select("#do_chart");
     var svgrectangle = document.getElementById("do_chart").getBoundingClientRect();
@@ -632,7 +632,7 @@ class DistributionOrderWidget(Widget):
         // Draw y-axis
         var yAxis = d3.svg.axis().scale(y_value)
         .orient("left")
-        .ticks(5)
+        .ticks(Math.min(Math.floor((svgrectangle['height'] - 10 - margin_x) / 20), 5))
         .tickFormat(d3.format("s"));
         svg.append("g")
         .attr("transform", "translate(" + margin_y + ", 10 )")
@@ -768,7 +768,7 @@ class DistributionOrderWidget(Widget):
             ),
         )
         result = [
-            '<select id="do_selectButton"></select>',
+            '<select class="form-select form-select-sm d-inline-block w-auto" id="do_selectButton"></select>',
             '<svg class="chart mb-2" id="do_chart" style="width:100%; height: 170px;"></svg>',
             '<table id="do_overview" style="display: none">',
         ]
@@ -866,7 +866,7 @@ class PurchaseOrderWidget(Widget):
         else:
             return "?%s" % urlencode({"fence1": self.fence1, "fence2": self.fence2})
 
-    javascript = """
+    javascript = r"""
     var margin_y = 70;  // Width allocated for the Y-axis
     var svg = d3.select("#po_chart");
     var svgrectangle = document.getElementById("po_chart").getBoundingClientRect();
@@ -955,7 +955,7 @@ class PurchaseOrderWidget(Widget):
         // Draw y-axis
          var yAxis = d3.svg.axis().scale(y_value)
         .orient("left")
-        .ticks(5)
+        .ticks(Math.min(Math.floor((svgrectangle['height'] - 10 - margin_x) / 20), 5))
         .tickFormat(d3.format("s"));
          svg.append("g")
         .attr("transform", "translate(" + margin_y + ", 10 )")
@@ -1150,7 +1150,7 @@ class PurchaseOrderWidget(Widget):
                 ),
             )
         result = [
-            '<select id="po_selectButton"></select>',
+            '<select class="form-select form-select-sm d-inline-block w-auto" id="po_selectButton"></select>',
             '<svg class="chart mb-2" id="po_chart" style="width:100%; height: 170px;"></svg>',
             '<table id="po_overview" style="display: none">',
         ]
@@ -1806,11 +1806,10 @@ class InventoryByLocationWidget(Widget):
       .style("text-anchor", "end")
       .attr("transform","rotate(90 " + (x_width/2) + " " + y_zero + ")  ");
 
-
     // Draw the Y-axis
     var yAxis = d3.svg.axis()
       .scale(y)
-      .ticks(4)
+      .ticks(Math.min(Math.floor((svgrectangle['height'] - 20) / 20), 8))
       .orient("left")
       .tickFormat(d3.format("s"));
     d3.select("#invByLoc")
@@ -1898,7 +1897,7 @@ class InventoryByItemWidget(Widget):
     // Draw the Y-axis
     var yAxis = d3.svg.axis()
       .scale(y)
-      .ticks(4)
+      .ticks(Math.min(Math.floor((svgrectangle['height'] - 20) / 20), 8))
       .orient("left")
       .tickFormat(d3.format("s"));
     d3.select("#invByItem")

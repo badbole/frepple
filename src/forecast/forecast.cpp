@@ -907,7 +907,6 @@ double ForecastBucket::getOrdersPlanned() const {
 }
 
 double ForecastBucketData::getOrdersPlanned() const {
-  if (!getForecast()->getPlanned()) return 0.0;
   double planned = 0.0;
   Item::bufferIterator bufiter(getForecast()->getForecastItem());
   while (Buffer* buf = bufiter.next()) {
@@ -1016,6 +1015,7 @@ ForecastData::ForecastData(const ForecastBase* f) {
 
   // Create buckets
   short cnt = 0;
+  buckets.reserve(dates.size());
   for (auto b : dates)
     buckets.emplace_back(f, b.getStart(), b.getEnd(), cnt++, mode == 2);
 
@@ -1239,7 +1239,15 @@ void ForecastData::flush() {
         if (argcount < 42)
           argcount += 3;
         else {
-          DatabaseResult(db, stmt);
+          try {
+            DatabaseResult(db, stmt);
+          } catch (exception& e) {
+            logger << "Exception caught when saving a forecast: " << e.what()
+                   << endl;
+            DatabaseStatement rollback("rollback");
+            db.executeSQL(rollback);
+            DatabaseResult(db, stmt_begin);
+          }
           argcount = 0;
         }
         i.clearDirty();
@@ -1251,13 +1259,22 @@ void ForecastData::flush() {
           stmt.setArgument(argcount + 2, "");
           argcount += 3;
         }
-        DatabaseResult(db, stmt);
+        try {
+          DatabaseResult(db, stmt);
+        } catch (exception& e) {
+          logger << "Exception caught when saving a forecast: " << e.what()
+                 << endl;
+          // Roll back current transaction, and start a new one
+          DatabaseStatement rollback("rollback");
+          db.executeSQL(rollback);
+          DatabaseResult(db, stmt_begin);
+        }
       }
       // commit the transaction
       DatabaseResult(db, stmt_end);
     }
   } catch (exception& e) {
-    logger << "Exception caught when saving a forecast" << e.what() << endl;
+    logger << "Exception caught when saving a forecast: " << e.what() << endl;
   }
 }
 

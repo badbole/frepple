@@ -307,7 +307,9 @@ if not hasattr(sys, "argv") or "test" in sys.argv or "FREPPLE_TEST" in os.enviro
 #  - month-day-year: US format
 #  - day-month-year: European format
 #  - year-month-day: international format. This is the default
+# As option you can choose to hide the hour, minutes and seconds.
 DATE_STYLE = "year-month-day"
+DATE_STYLE_WITH_HOURS = False
 
 if DATE_STYLE == "month-day-year":
     # Option 1: US style
@@ -318,6 +320,8 @@ if DATE_STYLE == "month-day-year":
     DATETIME_FORMAT = (
         # see https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#std-templatefilter-date
         "m/d/Y H:i:s"
+        if DATE_STYLE_WITH_HOURS
+        else "m/d/Y"
     )
     DATE_FORMAT_JS = (
         # see https://bootstrap-datepicker.readthedocs.io/en/latest/options.html#format
@@ -326,6 +330,8 @@ if DATE_STYLE == "month-day-year":
     DATETIME_FORMAT_JS = (
         # see https://momentjs.com/docs/#/displaying/
         "MM-DD-YYYY HH:mm:ss"
+        if DATE_STYLE_WITH_HOURS
+        else "MM-DD-YYYY"
     )
     DATE_INPUT_FORMATS = [
         # See https://docs.djangoproject.com/en/3.2/ref/settings/#std-setting-DATE_FORMAT
@@ -367,6 +373,8 @@ elif DATE_STYLE == "day-month-year":
     DATETIME_FORMAT = (
         # see https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#std-templatefilter-date
         "d-m-Y H:i:s"
+        if DATE_STYLE_WITH_HOURS
+        else "d-m-Y"
     )
     DATE_FORMAT_JS = (
         # see https://bootstrap-datepicker.readthedocs.io/en/latest/options.html#format
@@ -375,6 +383,8 @@ elif DATE_STYLE == "day-month-year":
     DATETIME_FORMAT_JS = (
         # see https://momentjs.com/docs/#/displaying/
         "DD-MM-YYYY HH:mm:ss"
+        if DATE_STYLE_WITH_HOURS
+        else "DD-MM-YYYY"
     )
     DATE_INPUT_FORMATS = [
         # See https://docs.djangoproject.com/en/3.2/ref/settings/#std-setting-DATE_FORMAT
@@ -417,6 +427,8 @@ else:
     DATETIME_FORMAT = (
         # see https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#std-templatefilter-date
         "Y-m-d H:i:s"
+        if DATE_STYLE_WITH_HOURS
+        else "Y-m-d"
     )
     DATE_FORMAT_JS = (
         # see https://bootstrap-datepicker.readthedocs.io/en/latest/options.html#format
@@ -425,6 +437,8 @@ else:
     DATETIME_FORMAT_JS = (
         # see https://momentjs.com/docs/#/displaying/
         "YYYY-MM-DD HH:mm:ss"
+        if DATE_STYLE_WITH_HOURS
+        else "YYYY-MM-DD"
     )
     DATE_INPUT_FORMATS = [
         # See https://docs.djangoproject.com/en/3.2/ref/settings/#std-setting-DATE_FORMAT
@@ -498,12 +512,21 @@ MIDDLEWARE = (
     # which can be useful for development or for demo models.
     # "freppledb.common.middleware.AutoLoginAsAdminUser",
     "freppledb.common.middleware.MultiDBMiddleware",
+    # Uncomment the next line to only allow a list of IP addresses
+    # to access the application (see variable ALLOWED_IPs) below
+    # "freppledb.common.middleware.AllowedIpMiddleware",
     # Optional: The following middleware allows authentication with HTTP headers
     "freppledb.common.middleware.HTTPAuthenticationMiddleware",
     "freppledb.common.middleware.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
 )
+
+# Variable ALLOWED_IPS defines a list of IP adresses allowed to access the application
+# AllowedIpMiddleware needs to be active. /24 mask IP address is supported.
+# ALLOWED_IPS = [
+#     "127.0.0.1",
+# ]
 
 # Custom attribute fields in the database
 # After each change of this setting, the following commands MUST be

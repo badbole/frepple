@@ -137,6 +137,10 @@ based on a predefined schedule.
 
 Optionally, a email can be sent out upon failure or success of the execution.
 
+The start time of a scheduled task is saved in the database with a fixed UTC offset.
+As a consequence, planners living in countries where daylight saving time (DST) applies
+will notice a one-hour difference for the scheduled task start depending on whether DST is active or not.
+
 .. tabs::
 
    .. tab:: Execution screen
@@ -420,7 +424,10 @@ command is more an exception.
 Scenario management
 -------------------
 
-This option allows a user to either create copies of a dataset into a
+Scenarios are isolated databases that allow working with multiple datasets.
+See :doc:`/user-interface/what-if-scenarios` for an quick introduction.
+
+This action allows a user to either create copies of a dataset into a
 what-if scenario or promote the data from a scenario into *Production* database.
 
 When the data is successfully copied, the status changes from 'Free'
@@ -682,6 +689,10 @@ Generate time buckets
 
 Many output reports are displaying the plan results aggregated into time
 buckets. These time buckets are defined with the tables dates and bucket dates.
+
+For all reports to work correctly and avoid all ambiguity you need to assure
+the expressions generate a unique name for each bucket. For instance, just using
+"%y" as day name won't work.
 
 This tasks allows you to populate these tables in an easy way with buckets
 with daily, weekly, monthly, quarterly and yearly granularity. Existing bucket

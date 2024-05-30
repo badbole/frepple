@@ -51,7 +51,7 @@ class ForecastWidget(Widget):
     def args(self):
         return "?%s" % urlencode({"history": self.history, "future": self.future})
 
-    javascript = """
+    javascript = r"""
 
 
     // Collect the data
@@ -159,7 +159,7 @@ class ForecastWidget(Widget):
       // Draw y-axis
       var yAxis = d3.svg.axis().scale(y)
           .orient("left")
-          .ticks(5)
+          .ticks(Math.min(Math.floor((svgrectangle['height'] - margin_x - 10) / 20), 5))
           .tickFormat(d3.format("s"));
       svg.append("g")
         .attr("transform", "translate(" + margin_y + ", 10 )")
@@ -258,7 +258,7 @@ class ForecastWidget(Widget):
         )
 
         result = [
-            '<select id="fcst_selectButton"></select>',
+            '<select class="form-select form-select-sm d-inline-block w-auto" id="fcst_selectButton"></select>',
             '<svg class="chart" id="forecast" style="width:100%; height: 100%"></svg>',
             '<table style="display:none">',
         ]
@@ -353,6 +353,15 @@ class ForecastAccuracyWidget(Widget):
         min_error = val;
       });
 
+    // Reduce the number of displayed points if too many
+    var nb_of_ticks = (svgrectangle['width'] - margin_y - 10) / 20;
+    var visible=[]
+    var step_visible = Math.ceil(domain_x.length / nb_of_ticks);
+    for (let x=0; x < domain_x.length; x++){
+      if (x==0 || x % step_visible == 0)
+        visible.push(domain_x[x]);
+    }
+
     var x = d3.scale.ordinal()
       .domain(domain_x)
       .rangeRoundBands([0, svgrectangle['width'] - margin_y - 10], 0);
@@ -379,7 +388,7 @@ class ForecastAccuracyWidget(Widget):
 
     // Draw x-axis
     var xAxis = d3.svg.axis().scale(x)
-        .orient("bottom").ticks(5);
+        .orient("bottom").tickValues(visible);
     svg.append("g")
       .attr("transform", "translate(" + margin_y  + ", " + (svgrectangle['height'] - margin_x) +" )")
       .attr("class", "x axis")
@@ -393,7 +402,7 @@ class ForecastAccuracyWidget(Widget):
     // Draw y-axis
     var yAxis = d3.svg.axis().scale(y)
         .orient("left")
-        .ticks(5)
+        .ticks(Math.min(Math.floor((svgrectangle['height'] - 10 - margin_x) / 20), 5))
         .tickFormat(d3.format(".0f%"));
     svg.append("g")
       .attr("transform", "translate(" + margin_y + ", 10 )")
